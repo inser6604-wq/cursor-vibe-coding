@@ -1,0 +1,142 @@
+/* Tablet: 768px ~ 1439px */
+@media (max-width: 1439px) {
+  .destinations__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dest-card {
+    aspect-ratio: 4 / 5;
+  }
+
+  .journey__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .header__actions .btn--outline {
+    display: none;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .journey__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .timeline {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .timeline__connector {
+    display: none;
+  }
+
+  .timeline__step {
+    min-width: 140px;
+  }
+
+  .reservation__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .footer__cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Mobile: 767px and below */
+@media (max-width: 767px) {
+  :root {
+    --section-pad: 64px;
+  }
+
+  .container {
+    width: min(100% - 32px, var(--container));
+  }
+
+  .hero__slide {
+    display: none;
+  }
+
+  .hero__content {
+    padding-bottom: 80px;
+  }
+
+  .hero__cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .destinations__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dest-card {
+    aspect-ratio: 16 / 9;
+  }
+
+  .experience__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-card {
+    aspect-ratio: 16 / 10;
+  }
+
+  .gallery__item {
+    flex: 0 0 85vw;
+  }
+
+  .reservation__form {
+    padding: 28px 20px;
+  }
+
+  .footer__links {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .footer__legal {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__links {
+    grid-template-columns: 1fr;
+  }
+}

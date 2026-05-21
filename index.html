@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AETHER — 프리미엄 우주여행 브랜드. 지구의 경계를 넘어선 럭셔리 스페이스 저니.">
+  <title>AETHER — Luxury Space Journeys</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="#" class="logo" aria-label="AETHER 홈">
+        <img src="images/aether-logo.png" alt="AETHER" class="logo__img" width="260" height="52">
+      </a>
+      <nav class="nav" aria-label="메인 네비게이션">
+        <ul class="nav__list">
+          <li><a href="#destinations" class="nav__link">DESTINATIONS</a></li>
+          <li><a href="#experience" class="nav__link">EXPERIENCE</a></li>
+          <li><a href="#journey" class="nav__link">JOURNEY</a></li>
+          <li><a href="#about" class="nav__link">ABOUT</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="#reservation" class="btn btn--outline btn--sm">BOOK NOW</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="모바일 네비게이션" hidden>
+      <ul>
+        <li><a href="#destinations">DESTINATIONS</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
+        <li><a href="#journey">JOURNEY</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#reservation">BOOK NOW</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero" aria-label="메인 히어로">
+      <div class="hero__bg">
+        <img src="images/hero/main-hero.png" alt="지구와 우주선이 보이는 시네마틱 우주 풍경" class="hero__img" fetchpriority="high">
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__content container">
+        <p class="hero__label">LUXURY SPACE JOURNEYS</p>
+        <h1 class="hero__title">BEYOND THE<br>EDGE OF EARTH</h1>
+        <p class="hero__desc">인류의 다음 목적지는, 지구 너머에 있습니다.<br>AETHER와 함께 새로운 우주의 문을 열어보세요.</p>
+        <div class="hero__cta">
+          <a href="#destinations" class="btn btn--primary">
+            EXPLORE JOURNEYS
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#destinations" class="btn btn--text">
+            VIEW DESTINATIONS
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero__slide" aria-hidden="true">
+        <span class="hero__slide-current">01</span>
+        <span class="hero__slide-divider">/</span>
+        <span class="hero__slide-total">05</span>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <span>SCROLL</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about section" id="about">
+      <div class="container about__grid">
+        <div class="about__text reveal">
+          <p class="section-label">ABOUT AETHER</p>
+          <h2 class="section-title">WE DESIGN<br>EXTRAORDINARY<br>JOURNEYS</h2>
+          <p class="section-desc">AETHER는 단순한 우주여행이 아닌, 새로운 삶의 경험을 설계합니다. 최첨단 기술과 인간 중심의 서비스가 만나 당신만의 우주 여정을 완성합니다.</p>
+          <a href="#journey" class="link-arrow">LEARN MORE</a>
+        </div>
+        <div class="about__visual reveal reveal--delay">
+          <img src="images/gallery/about-img.png" alt="우주선 내부에서 지구를 바라보는 럭셔리 라운지" loading="lazy" class="about__img">
+          <div class="about__img-overlay"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destinations -->
+    <section class="destinations section" id="destinations">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-header__left">
+            <p class="section-label">DESTINATIONS</p>
+            <h2 class="section-title">CHOOSE YOUR NEXT<br>DESTINATION</h2>
+            <p class="section-desc">지구를 넘어, 상상 이상의 세계가 당신을 기다립니다.<br>AETHER가 안내하는 특별한 목적지를 만나보세요.</p>
+          </div>
+          <a href="#" class="link-arrow section-header__link">VIEW ALL DESTINATIONS</a>
+        </div>
+        <div class="destinations__grid">
+          <article class="dest-card reveal">
+            <div class="dest-card__img-wrap">
+              <img src="images/destinations/mars.jpg" alt="화성" loading="lazy" class="dest-card__img">
+            </div>
+            <div class="dest-card__info">
+              <span class="dest-card__num">01</span>
+              <h3 class="dest-card__name">MARS</h3>
+              <p class="dest-card__sub">The Red Planet</p>
+            </div>
+            <button class="dest-card__arrow" aria-label="MARS 자세히 보기">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10h10M11 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </button>
+          </article>
+          <article class="dest-card reveal reveal--delay">
+            <div class="dest-card__img-wrap">
+              <img src="images/destinations/europa.jpg" alt="유로파" loading="lazy" class="dest-card__img">
+            </div>
+            <div class="dest-card__info">
+              <span class="dest-card__num">02</span>
+              <h3 class="dest-card__name">EUROPA</h3>
+              <p class="dest-card__sub">Ocean World</p>
+            </div>
+            <button class="dest-card__arrow" aria-label="EUROPA 자세히 보기">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10h10M11 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </button>
+          </article>
+          <article class="dest-card reveal reveal--delay-2">
+            <div class="dest-card__img-wrap">
+              <img src="images/destinations/venus.jpg" alt="금성" loading="lazy" class="dest-card__img">
+            </div>
+            <div class="dest-card__info">
+              <span class="dest-card__num">03</span>
+              <h3 class="dest-card__name">Venus</h3>
+              <p class="dest-card__sub">The Morning Star</p>
+            </div>
+            <button class="dest-card__arrow" aria-label="venus 자세히 보기">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10h10M11 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </button>
+          </article>
+          <article class="dest-card reveal reveal--delay-3">
+            <div class="dest-card__img-wrap">
+              <img src="images/destinations/jupiter.jpg" alt="목성" loading="lazy" class="dest-card__img">
+            </div>
+            <div class="dest-card__info">
+              <span class="dest-card__num">04</span>
+              <h3 class="dest-card__name">Jupiter</h3>
+              <p class="dest-card__sub">King of Giants</p>
+            </div>
+            <button class="dest-card__arrow" aria-label="jupiter 자세히 보기">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10h10M11 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="experience section" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-header__left">
+            <p class="section-label">EXPERIENCE</p>
+            <h2 class="section-title">BEYOND<br>IMAGINATION</h2>
+            <p class="section-desc">우주에서는 가능한 특별한 경험.<br>당신의 감각을 깨우는 순간.</p>
+          </div>
+          <a href="#" class="link-arrow section-header__link">DISCOVER EXPERIENCE</a>
+        </div>
+        <div class="experience__grid">
+          <article class="exp-card reveal">
+            <div class="exp-card__img-wrap">
+              <img src="images/gallery/experience01.png" alt="무중력 체험" loading="lazy" class="exp-card__img">
+            </div>
+            <div class="exp-card__content">
+              <span class="exp-card__icon" aria-hidden="true">◎</span>
+              <h3 class="exp-card__title">ZERO GRAVITY</h3>
+              <p class="exp-card__sub">완벽한 무중력 경험</p>
+            </div>
+          </article>
+          <article class="exp-card reveal reveal--delay">
+            <div class="exp-card__img-wrap">
+              <img src="images/gallery/zane-persaud-qFn515nfhDs-unsplash.jpg" alt="스페이스 다이닝" loading="lazy" class="exp-card__img">
+              <div class="exp-card__overlay"></div>
+            </div>
+            <div class="exp-card__content">
+              <span class="exp-card__icon" aria-hidden="true">◇</span>
+              <h3 class="exp-card__title">SPACE DINING</h3>
+              <p class="exp-card__sub">예술, 그 이상의 경험</p>
+            </div>
+          </article>
+          <article class="exp-card reveal reveal--delay-2">
+            <div class="exp-card__img-wrap">
+              <img src="images/gallery/experience03.jpg" alt="천문대" loading="lazy" class="exp-card__img">
+            </div>
+            <div class="exp-card__content">
+              <span class="exp-card__icon" aria-hidden="true">◉</span>
+              <h3 class="exp-card__title">OBSERVATORY</h3>
+              <p class="exp-card__sub">우주를 가장 가까이에서</p>
+            </div>
+          </article>
+          <article class="exp-card reveal reveal--delay-3">
+            <div class="exp-card__img-wrap">
+              <img src="images/gallery/experience04.jpg" alt="프라이빗 캡슐" loading="lazy" class="exp-card__img">
+            </div>
+            <div class="exp-card__content">
+              <span class="exp-card__icon" aria-hidden="true">□</span>
+              <h3 class="exp-card__title">PRIVATE CAPSULE</h3>
+              <p class="exp-card__sub">당신만을 위한 우주 공간</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Journey -->
+    <section class="journey section" id="journey">
+      <div class="journey__bg" aria-hidden="true">
+        <img src="images/gallery/gallery06.png" alt="로켓 발사 장면" loading="lazy" class="journey__bg-img">
+        <div class="journey__bg-overlay"></div>
+      </div>
+      <div class="container journey__grid">
+        <div class="journey__header reveal">
+          <p class="section-label">JOURNEY</p>
+          <h2 class="section-title">YOUR JOURNEY<br>WITH AETHER</h2>
+          <p class="section-desc">예약부터 출발까지, 모든 과정이<br>당신만을 위해 설계 됩니다.</p>
+          <a href="#" class="link-arrow">HOW IT WORKS</a>
+        </div>
+        <div class="journey__timeline reveal reveal--delay">
+          <div class="timeline">
+            <div class="timeline__step">
+              <div class="timeline__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <div class="timeline__text">
+                <span class="timeline__num">01</span>
+                <h3 class="timeline__title">RESERVE</h3>
+                <p class="timeline__sub">여행 예약</p>
+              </div>
+            </div>
+            <div class="timeline__connector"></div>
+            <div class="timeline__step">
+              <div class="timeline__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <div class="timeline__text">
+                <span class="timeline__num">02</span>
+                <h3 class="timeline__title">TRAINING</h3>
+                <p class="timeline__sub">전문 훈련 과정</p>
+              </div>
+            </div>
+            <div class="timeline__connector"></div>
+            <div class="timeline__step">
+              <div class="timeline__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L8 10h8L12 2zM6 14l6 8 6-8H6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="timeline__text">
+                <span class="timeline__num">03</span>
+                <h3 class="timeline__title">LAUNCH</h3>
+                <p class="timeline__sub">지구를 벗어나다</p>
+              </div>
+            </div>
+            <div class="timeline__connector"></div>
+            <div class="timeline__step">
+              <div class="timeline__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+              </div>
+              <div class="timeline__text">
+                <span class="timeline__num">04</span>
+                <h3 class="timeline__title">EXPLORE</h3>
+                <p class="timeline__sub">새로운 세계를 경험하다</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery section" id="gallery">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-header__left">
+            <p class="section-label">GALLERY</p>
+            <h2 class="section-title">A GLIMPSE OF<br>THE UNIVERSE</h2>
+          </div>
+        </div>
+        <div class="gallery__wrapper reveal reveal--delay">
+          <div class="gallery__track" id="galleryTrack">
+            <div class="gallery__item"><img src="images/gallery/gallery01.jpg" alt="space" loading="lazy"></div>
+            <div class="gallery__item"><img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800&q=80" alt="지구에서 본 우주" loading="lazy"></div>
+            <div class="gallery__item"><img src="images/gallery/gallery03.jpg" alt="우주선 내부" loading="lazy"></div>
+            <div class="gallery__item"><img src="images/gallery/gallery04.jpg" alt="space" loading="lazy"></div>
+            <div class="gallery__item"><img src="images/gallery/gallery05.jpg" alt="우주비행사" loading="lazy"></div>
+            <div class="gallery__item"><img src="images/gallery/gallery06.png" alt="로켓 발사" loading="lazy"></div>
+          </div>
+          <div class="gallery__nav">
+            <button class="gallery__btn" id="galleryPrev" aria-label="이전 이미지">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12 5l-5 5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </button>
+            <button class="gallery__btn" id="galleryNext" aria-label="다음 이미지">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservation -->
+    <section class="reservation section" id="reservation">
+      <div class="reservation__bg">
+        <img src="images/hero/main-hero.png" alt="" aria-hidden="true" loading="lazy" class="reservation__bg-img">
+        <div class="reservation__bg-overlay"></div>
+      </div>
+      <div class="container reservation__grid">
+        <div class="reservation__text reveal">
+          <p class="section-label">RESERVATION</p>
+          <h2 class="section-title">READY TO BEGIN<br>YOUR JOURNEY?</h2>
+          <p class="section-desc">지금 바로 AETHER와 함께 우주 여행을 예약하세요. 전문 컨설턴트가 맞춤형 여정을 설계해 드립니다.</p>
+        </div>
+        <form class="reservation__form reveal reveal--delay" id="reservationForm" novalidate>
+          <div class="form-group">
+            <label for="userName" class="form-label">Name</label>
+            <input type="text" id="userName" name="user_name" class="form-input" placeholder="이름을 입력하세요" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="userEmail" class="form-label">Email</label>
+            <input type="email" id="userEmail" name="user_email" class="form-input" placeholder="이메일을 입력하세요" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="destination" class="form-label">Destination</label>
+            <select id="destination" name="destination" class="form-input form-select" required>
+              <option value="" disabled selected>목적지를 선택하세요</option>
+              <option value="Mars">Mars — The Red Planet</option>
+              <option value="Europa">Europa — Ocean World</option>
+              <option value="Titan">Venus - The Morning Star</option>
+              <option value="Lunar Orbit">Jupiter - King of Giants</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="departureDate" class="form-label">Departure Date</label>
+            <input type="date" id="departureDate" name="departure_date" class="form-input" required>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+            REQUEST JOURNEY
+          </button>
+          <p class="form-success" id="formSuccess" role="status" hidden>
+            ✦ 예약 요청이 성공적으로 접수되었습니다. 곧 연락드리겠습니다.
+          </p>
+          <p class="form-error" id="formError" role="alert" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__cta">
+      <div class="container footer__cta-inner">
+        <h2 class="footer__cta-title">THE UNIVERSE AWAITS</h2>
+        <a href="#reservation" class="btn btn--outline">BOOK YOUR JOURNEY</a>
+      </div>
+    </div>
+    <div class="footer__main">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="logo" aria-label="AETHER 홈">
+            <img src="images/aether-logo.png" alt="AETHER" class="logo__img logo__img--footer" width="280" height="56">
+          </a>
+          <p class="footer__tagline">지구의 경계를 넘어, 우주의 신비를 경험하세요.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/></svg></a>
+            <a href="#" aria-label="X"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.7l-5.2-6.8L5.4 22H2.3l7.3-8.4L1 2h6.8l4.7 6.2L18.9 2z"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M10 9l6 3-6 3V9z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <h4 class="footer__col-title">DESTINATIONS</h4>
+            <ul>
+              <li><a href="#">Mars</a></li>
+              <li><a href="#">Europa</a></li>
+              <li><a href="#">Titan</a></li>
+              <li><a href="#">Lunar Orbit</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__col-title">EXPERIENCE</h4>
+            <ul>
+              <li><a href="#">Zero Gravity</a></li>
+              <li><a href="#">Space Dining</a></li>
+              <li><a href="#">Observatory</a></li>
+              <li><a href="#">Private Capsule</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__col-title">COMPANY</h4>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#journey">Journey</a></li>
+              <li><a href="#reservation">Contact</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__copy">© 2026 AETHER. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">PRIVACY POLICY</a>
+          <a href="#">TERMS OF SERVICE</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Reservation success modal -->
+  <div class="reservation-modal" id="reservationModal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="reservationModalTitle">
+    <div class="reservation-modal__backdrop" id="reservationModalBackdrop">
+      <img src="images/hero/main-hero.png" alt="" class="reservation-modal__bg" aria-hidden="true">
+      <div class="reservation-modal__bg-dim"></div>
+    </div>
+    <div class="reservation-modal__dialog">
+      <button type="button" class="reservation-modal__close" id="reservationModalClose" aria-label="닫기">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+      <p class="section-label">RESERVATION COMPLETE</p>
+      <h2 class="reservation-modal__title" id="reservationModalTitle">예약이 완료되었습니다</h2>
+      <p class="reservation-modal__desc">✦ 예약 요청이 성공적으로 접수되었습니다.<br>전문 컨설턴트가 곧 연락드리겠습니다.</p>
+      <button type="button" class="btn btn--primary btn--full" id="reservationModalConfirm">확인</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/interaction.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

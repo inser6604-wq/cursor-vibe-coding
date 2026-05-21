@@ -1,0 +1,8 @@
+.DS_Store
+.env
+.env.local
+.vercel
+node_modules/
+
+# 빌드 시 생성되는 Supabase 설정 (시크릿 포함)
+js/config.js

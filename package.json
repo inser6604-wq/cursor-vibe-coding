@@ -1,0 +1,13 @@
+{
+  "name": "aether-landing",
+  "version": "1.0.0",
+  "description": "AETHER — Premium Space Travel Landing Page",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/generate-config.js",
+    "dev": "python3 -m http.server 8765",
+    "setup": "bash scripts/setup.sh",
+    "predeploy": "node scripts/generate-config.js",
+    "deploy": "bash scripts/deploy.sh"
+  }
+}
