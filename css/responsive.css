@@ -26,6 +26,11 @@
     display: none;
   }
 
+  .logo__img {
+    height: 44px;
+    max-width: 220px;
+  }
+
   .about__grid {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -34,6 +39,7 @@
   .section-header {
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 48px;
   }
 
   .journey__grid {
@@ -75,10 +81,16 @@
 @media (max-width: 767px) {
   :root {
     --section-pad: 64px;
+    --header-h: 64px;
   }
 
   .container {
     width: min(100% - 32px, var(--container));
+  }
+
+  .logo__img {
+    height: 36px;
+    max-width: 180px;
   }
 
   .hero__slide {
@@ -95,6 +107,24 @@
     gap: 16px;
   }
 
+  .section-header {
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+
+  .section-header__link {
+    white-space: normal;
+  }
+
+  .about__img-overlay {
+    background: linear-gradient(
+      to top,
+      var(--bg) 0%,
+      rgba(5, 8, 22, 0.5) 35%,
+      transparent 65%
+    );
+  }
+
   .destinations__grid {
     grid-template-columns: 1fr;
   }
@@ -108,7 +138,7 @@
   }
 
   .exp-card {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 4 / 5;
   }
 
   .gallery__item {
@@ -117,6 +147,18 @@
 
   .reservation__form {
     padding: 28px 20px;
+  }
+
+  .reservation-modal__dialog {
+    padding: 36px 24px 28px;
+  }
+
+  .footer__cta {
+    padding: 48px 0;
+  }
+
+  .footer__main {
+    padding: 48px 0 32px;
   }
 
   .footer__links {
@@ -132,6 +174,13 @@
   .footer__legal {
     flex-direction: column;
     gap: 12px;
+  }
+
+  .go-top {
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
   }
 }
 

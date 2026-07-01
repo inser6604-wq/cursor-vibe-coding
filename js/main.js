@@ -6,7 +6,6 @@
 
   const form = document.getElementById('reservationForm');
   const submitBtn = document.getElementById('submitBtn');
-  const formSuccess = document.getElementById('formSuccess');
   const formError = document.getElementById('formError');
   const modal = document.getElementById('reservationModal');
   const modalClose = document.getElementById('reservationModalClose');
@@ -75,11 +74,9 @@
       formError.textContent = msg;
       formError.hidden = false;
     }
-    if (formSuccess) formSuccess.hidden = true;
   }
 
   function showSuccess() {
-    if (formSuccess) formSuccess.hidden = true;
     if (formError) formError.hidden = true;
     form.reset();
     openModal();
@@ -91,7 +88,15 @@
       : { url: '', anonKey: '', tableName: 'reservations' };
 
     if (!url || !anonKey) {
-      console.info('[AETHER] Supabase 미설정 — 로컬 모드로 성공 처리');
+      const isLocal =
+        window.location.hostname === 'localhost' ||
+        window.location.hostname === '127.0.0.1';
+
+      if (!isLocal) {
+        throw new Error('Supabase 연동이 설정되지 않았습니다. Vercel 환경 변수를 확인한 뒤 Redeploy 해 주세요.');
+      }
+
+      console.info('[AETHER] Supabase 미설정 — 로컬 데모 모드');
       return { ok: true, local: true };
     }
 
@@ -106,20 +111,27 @@
         user_name: data.user_name.trim(),
         user_email: data.user_email.trim(),
         destination: data.destination,
-        departure_date: data.departure_date,
-        created_at: new Date().toISOString()
+        departure_date: data.departure_date
       }
     ]);
 
-    if (error) throw error;
+    if (error) {
+      const msg = error.message || 'Supabase 저장 실패';
+      throw new Error(msg);
+    }
     return { ok: true };
+  }
+
+  function formatSubmitError(err) {
+    if (!err) return '요청 처리 중 오류가 발생했습니다.';
+    if (typeof err.message === 'string' && err.message) return err.message;
+    return '요청 처리 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.';
   }
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     if (formError) formError.hidden = true;
-    if (formSuccess) formSuccess.hidden = true;
 
     const formData = new FormData(form);
     const data = {
@@ -143,7 +155,7 @@
       showSuccess();
     } catch (err) {
       console.error('[AETHER] Submit error:', err);
-      showError('요청 처리 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.');
+      showError(formatSubmitError(err));
     } finally {
       submitBtn?.classList.remove('btn--loading');
       submitBtn.disabled = false;

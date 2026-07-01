@@ -7,6 +7,7 @@
   const revealElements = document.querySelectorAll('.reveal');
   const header = document.getElementById('header');
   const heroBg = document.querySelector('.hero__bg');
+  const goTopBtn = document.getElementById('goTop');
 
   /* Intersection Observer — fade-up */
   const revealObserver = new IntersectionObserver(
@@ -27,8 +28,6 @@
   revealElements.forEach((el) => revealObserver.observe(el));
 
   /* Header scroll state */
-  let lastScroll = 0;
-
   function onScroll() {
     const scrollY = window.scrollY;
 
@@ -42,7 +41,16 @@
       heroBg.style.transform = `translateY(${offset}px)`;
     }
 
-    lastScroll = scrollY;
+    if (goTopBtn) {
+      const showGoTop = scrollY > 300;
+      goTopBtn.classList.toggle('is-visible', showGoTop);
+    }
+  }
+
+  if (goTopBtn) {
+    goTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });

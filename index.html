@@ -139,10 +139,10 @@
             </div>
             <div class="dest-card__info">
               <span class="dest-card__num">03</span>
-              <h3 class="dest-card__name">Venus</h3>
+              <h3 class="dest-card__name">VENUS</h3>
               <p class="dest-card__sub">The Morning Star</p>
             </div>
-            <button class="dest-card__arrow" aria-label="venus 자세히 보기">
+            <button class="dest-card__arrow" aria-label="VENUS 자세히 보기">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10h10M11 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
             </button>
           </article>
@@ -152,10 +152,10 @@
             </div>
             <div class="dest-card__info">
               <span class="dest-card__num">04</span>
-              <h3 class="dest-card__name">Jupiter</h3>
+              <h3 class="dest-card__name">JUPITER</h3>
               <p class="dest-card__sub">King of Giants</p>
             </div>
-            <button class="dest-card__arrow" aria-label="jupiter 자세히 보기">
+            <button class="dest-card__arrow" aria-label="JUPITER 자세히 보기">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10h10M11 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
             </button>
           </article>
@@ -188,7 +188,6 @@
           <article class="exp-card reveal reveal--delay">
             <div class="exp-card__img-wrap">
               <img src="images/gallery/experience02.jpg" alt="스페이스 다이닝" loading="lazy" class="exp-card__img">
-              <div class="exp-card__overlay"></div>
             </div>
             <div class="exp-card__content">
               <span class="exp-card__icon" aria-hidden="true">◇</span>
@@ -340,8 +339,8 @@
               <option value="" disabled selected>목적지를 선택하세요</option>
               <option value="Mars">Mars — The Red Planet</option>
               <option value="Europa">Europa — Ocean World</option>
-              <option value="Titan">Venus - The Morning Star</option>
-              <option value="Lunar Orbit">Jupiter - King of Giants</option>
+              <option value="Venus">Venus — The Morning Star</option>
+              <option value="Jupiter">Jupiter — King of Giants</option>
             </select>
           </div>
           <div class="form-group">
@@ -351,9 +350,6 @@
           <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
             REQUEST JOURNEY
           </button>
-          <p class="form-success" id="formSuccess" role="status" hidden>
-            ✦ 예약 요청이 성공적으로 접수되었습니다. 곧 연락드리겠습니다.
-          </p>
           <p class="form-error" id="formError" role="alert" hidden></p>
         </form>
       </div>
@@ -385,19 +381,19 @@
           <div class="footer__col">
             <h4 class="footer__col-title">DESTINATIONS</h4>
             <ul>
-              <li><a href="#">Mars</a></li>
-              <li><a href="#">Europa</a></li>
-              <li><a href="#">Titan</a></li>
-              <li><a href="#">Lunar Orbit</a></li>
+              <li><a href="#destinations">Mars</a></li>
+              <li><a href="#destinations">Europa</a></li>
+              <li><a href="#destinations">Venus</a></li>
+              <li><a href="#destinations">Jupiter</a></li>
             </ul>
           </div>
           <div class="footer__col">
             <h4 class="footer__col-title">EXPERIENCE</h4>
             <ul>
-              <li><a href="#">Zero Gravity</a></li>
-              <li><a href="#">Space Dining</a></li>
-              <li><a href="#">Observatory</a></li>
-              <li><a href="#">Private Capsule</a></li>
+              <li><a href="#experience">Zero Gravity</a></li>
+              <li><a href="#experience">Space Dining</a></li>
+              <li><a href="#experience">Observatory</a></li>
+              <li><a href="#experience">Private Capsule</a></li>
             </ul>
           </div>
           <div class="footer__col">
@@ -439,6 +435,12 @@
       <button type="button" class="btn btn--primary btn--full" id="reservationModalConfirm">확인</button>
     </div>
   </div>
+
+  <button type="button" class="go-top" id="goTop" aria-label="맨 위로 이동">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+      <path d="M9 3v12M9 3l-4 4M9 3l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/config.js"></script>

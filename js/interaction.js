@@ -9,17 +9,19 @@
   const mobileNav = document.getElementById('mobileNav');
 
   if (menuToggle && mobileNav) {
+    function setMenuOpen(open) {
+      menuToggle.setAttribute('aria-expanded', String(open));
+      mobileNav.hidden = !open;
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
     menuToggle.addEventListener('click', () => {
       const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-      menuToggle.setAttribute('aria-expanded', String(!expanded));
-      mobileNav.hidden = expanded;
+      setMenuOpen(!expanded);
     });
 
     mobileNav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        menuToggle.setAttribute('aria-expanded', 'false');
-        mobileNav.hidden = true;
-      });
+      link.addEventListener('click', () => setMenuOpen(false));
     });
   }
 

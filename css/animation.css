@@ -154,17 +154,6 @@
   }
 }
 
-@keyframes glowPulse {
-  0%, 100% {
-    box-shadow: 0 0 30px var(--glow);
-  }
-  50% {
-    box-shadow: 0 0 50px rgba(74, 108, 247, 0.5);
-  }
-}
-
-/* Card glow on hover — handled in style.css transitions */
-
 /* Form submit loading */
 .btn--loading {
   pointer-events: none;
