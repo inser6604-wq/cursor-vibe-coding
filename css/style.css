@@ -859,10 +859,13 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 40px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .form-group {
   margin-bottom: 20px;
+  min-width: 0;
 }
 
 .form-label {
@@ -876,7 +879,11 @@ body {
 }
 
 .form-input {
+  display: block;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   padding: 14px 18px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border);
@@ -897,17 +904,32 @@ body {
   background: rgba(255, 255, 255, 0.06);
 }
 
-.form-input:invalid:not(:placeholder-shown) {
+.form-input:user-invalid {
   border-color: rgba(255, 100, 100, 0.5);
+}
+
+input.form-input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
+  min-height: 48px;
+}
+
+input.form-input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
 }
 
 .form-select {
   appearance: none;
+  -webkit-appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%23fff' stroke-opacity='0.5' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 16px center;
+  background-size: 12px;
   padding-right: 40px;
   cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .form-select option {
